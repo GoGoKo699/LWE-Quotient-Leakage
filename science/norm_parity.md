@@ -36,7 +36,9 @@ Define the augmentation homomorphism
 Both the coefficient modulus and the relation $`X^N+1`$ vanish under this map. Since $`z^2=z`$ in $`\mathbb F_2`$,
 
 ```math
+\begin{aligned}
 c=\sum_j\phi(S_j)+\sum_i\phi(E_i).
+\end{aligned}
 \tag{N1}
 ```
 
@@ -47,8 +49,10 @@ c=\sum_j\phi(S_j)+\sum_i\phi(E_i).
 Define the public event
 
 ```math
+\begin{aligned}
 G(A):\qquad \sum_{i=1}^m\phi(A_{ij})=1
 \quad\text{for every }j\in[k].
+\end{aligned}
 \tag{N2}
 ```
 
@@ -64,9 +68,11 @@ has real acceptance probability $`2^{-k}`$ and independent-experiment acceptance
 *Proof.* Apply $`\phi`$ to every entry of the equation $`B=AS+E`$ and sum its rows. Combining the result with (N1) gives
 
 ```math
+\begin{aligned}
 c+\sum_i\phi(B_i)
 =\sum_{j=1}^{k}
  \left(1+\sum_{i=1}^{m}\phi(A_{ij})\right)\phi(S_j).
+\end{aligned}
 \tag{N3}
 ```
 
@@ -85,9 +91,11 @@ The test is also a special case of the [scalar ideal-dimension law](linear_leaka
 Let the disclosed ring element be
 
 ```math
+\begin{aligned}
 K=\sum_{j=1}^{k}S_j\overline{S_j}
    +\sum_{i=1}^{m}E_i\overline{E_i}\in R,
 \qquad \bar f=f(X^{-1}).
+\end{aligned}
 \tag{N4}
 ```
 

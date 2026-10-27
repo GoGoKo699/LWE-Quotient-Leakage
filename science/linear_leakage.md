@@ -81,8 +81,10 @@ h-H_E\mathbf b\in W_A.
 The public test accepting exactly when this membership holds has acceptance gap
 
 ```math
+\begin{aligned}
 \delta(H)=\mathbb E_A\left[1-p^{r_A-r_H}\right]
- \tag{A1}
+\end{aligned}
+\tag{A1}
 ```
 
 between $`\mathsf T_{\mathcal D,H}`$ and $`\mathsf J_{\mathcal D,H}`$, for every law $`\mathcal D`$ independent of $`A`$.
@@ -92,9 +94,11 @@ between $`\mathsf T_{\mathcal D,H}`$ and $`\mathsf J_{\mathcal D,H}`$, for every
 If $`S`$ and $`E`$ are independent and uniform modulo $`q`$, then
 
 ```math
+\begin{aligned}
 \Delta(\mathsf T_{\mathcal D,H},\mathsf J_{\mathcal D,H})
  =\delta(H).
- \tag{A2}
+\end{aligned}
+\tag{A2}
 ```
 
 More precisely, conditional on $`A,B`$, the real hint is uniform on $`H_E\mathbf b+W_A`$.
@@ -112,15 +116,19 @@ holds exactly. The experiment $`\mathsf I_H`$ is efficiently samplable: sample $
 *Proof.* Substituting $`\mathbf e=\mathbf b-M_A\mathbf s`$ gives the identity
 
 ```math
+\begin{aligned}
 h=H_E\mathbf b+D_A\mathbf s.
- \tag{A3}
+\end{aligned}
+\tag{A3}
 ```
 
 This proves the support constraint. We also have
 
 ```math
+\begin{aligned}
 W=W_A+\mathrm{Im}\,H_E.
- \tag{A4}
+\end{aligned}
+\tag{A4}
 ```
 
 Indeed, $`D_A=H_S-H_EM_A`$ shows that the right-hand side is contained in $`W`$, while $`H_S=D_A+H_EM_A`$ proves the reverse inclusion.
@@ -144,19 +152,23 @@ The theorem separates two statements that should not be conflated. For arbitrary
 Write $`\mathrm{ct}(f)`$ for the constant coefficient of the canonical representative of $`f\in R_p`$. The identity
 
 ```math
+\begin{aligned}
 \mathrm{ct}(\bar v x)
  =\sum_{a=0}^{N-1}v_ax_a
- \tag{A5}
+\end{aligned}
+\tag{A5}
 ```
 
 shows that this pairing is nondegenerate. To see the identity directly, expand $`\bar v x=\sum_{a,b}v_ax_bX^{b-a}`$: since $`-(N-1)\leq b-a\leq N-1`$, only $`a=b`$ contributes to the constant term. Thus every scalar coefficient-linear hint can be written uniquely as
 
 ```math
+\begin{aligned}
 h=\mathrm{ct}\left(
        \sum_{j=1}^k\bar u_jS_j+
        \sum_{i=1}^m\bar v_iE_i\right),
  \qquad u\in R_p^k,\quad v\in R_p^m.
- \tag{A6}
+\end{aligned}
+\tag{A6}
 ```
 
 Here and below the hidden variables inside an expression over $`R_p`$ are implicitly reduced modulo $`p`$.
@@ -171,10 +183,12 @@ I=(\bar v_1,\ldots,\bar v_m)\subseteq R_p,
 Consider the public event
 
 ```math
+\begin{aligned}
 G_{u,v}(A):\qquad
  \sum_{i=1}^m\bar v_iA_{ij}=\bar u_j
  \quad\text{in }R_p\text{ for every }j\in[k].
- \tag{A7}
+\end{aligned}
+\tag{A7}
 ```
 
 ### Theorem A2: Scalar ideal-dimension law
@@ -182,26 +196,32 @@ G_{u,v}(A):\qquad
 If some $`\bar u_j\notin I`$, then $`G_{u,v}`$ is empty. Otherwise,
 
 ```math
+\begin{aligned}
 \Pr_A[G_{u,v}(A)]=p^{-kr}.
- \tag{A8}
+\end{aligned}
+\tag{A8}
 ```
 
 On $`G_{u,v}`$, the public sample forces
 
 ```math
+\begin{aligned}
 h=\mathrm{ct}\left(\sum_i\bar v_iB_i\right).
- \tag{A9}
+\end{aligned}
+\tag{A9}
 ```
 
 The test accepting when both (A7) and (A9) hold has acceptance gap
 
 ```math
+\begin{aligned}
 \delta(u,v)=
  \begin{cases}
  p^{-kr}(1-1/p),&\text{if every }\bar u_j\in I,\\
  0,&\text{otherwise},
  \end{cases}
- \tag{A10}
+\end{aligned}
+\tag{A10}
 ```
 
 for every hidden law independent of $`A`$. For uniform independent $`S,E`$, this is the exact statistical distance from the independent experiment.
@@ -240,8 +260,10 @@ g=\gcd(F,V_1,\ldots,V_m)
 is chosen monic, then
 
 ```math
+\begin{aligned}
 r=N-\deg g.
- \tag{A11}
+\end{aligned}
+\tag{A11}
 ```
 
 The formula remains valid when $`F`$ has repeated irreducible factors.
@@ -280,8 +302,10 @@ The assumption $`p\mid q`$ is essential when projecting a transcript modulo $`q`
 If the hint instead takes values in $`(\mathbb Z/t\mathbb Z)^\ell`$ for a composite divisor $`t`$ of $`q`$, the vector law has a precise replacement. Let $`H_S,H_E,M_A`$ be matrices over $`\mathbb Z/t\mathbb Z`$, and define $`W,W_A`$ as their additive image groups. Then
 
 ```math
+\begin{aligned}
 \delta_t(H)=\mathbb E_A\left[1-\frac{|W_A|}{|W|}\right].
- \tag{A12}
+\end{aligned}
+\tag{A12}
 ```
 
 The same public affine-support test has this exact acceptance gap for every hidden law, and this is the exact statistical distance for uniform independent hidden variables. The proof of Theorem A1 uses only uniformity under homomorphisms of finite additive groups and the identity $`W=W_A+\mathrm{Im}\,H_E`$, so it applies without change. Image cardinalities can be evaluated by integer Smith normal form, or by a prime-power CRT decomposition.
@@ -308,9 +332,11 @@ Suppose $`q`$ is even and take $`p=2`$. Define the augmentation
 This is a well-defined surjective ring map. For integer coefficient vectors, the bit
 
 ```math
+\begin{aligned}
 c=\left(\sum_{j=1}^k\|S_j\|_{\mathrm{coef}}^2+
            \sum_{i=1}^m\|E_i\|_{\mathrm{coef}}^2\right)\bmod2
- \tag{A13}
+\end{aligned}
+\tag{A13}
 ```
 
 equals $`\sum_j\varphi(S_j)+\sum_i\varphi(E_i)`$ because $`a^2=a\bmod2`$. It is independent of the chosen representatives modulo even $`q`$.
@@ -318,9 +344,11 @@ equals $`\sum_j\varphi(S_j)+\sum_i\varphi(E_i)`$ because $`a^2=a\bmod2`$. It is 
 Put $`\Omega=1+X+\cdots+X^{N-1}\in R_2`$. Then $`X\Omega=\Omega`$, and $`\bar\Omega=\Omega`$. The ideal $`(\Omega)`$ is one-dimensional: all its elements are scalar multiples of $`\Omega`$. Thus (A13) is the scalar hint with every $`u_j=v_i=\Omega`$. The cancellation event becomes
 
 ```math
+\begin{aligned}
 G(A):\qquad\sum_{i=1}^m\varphi(A_{ij})=1
  \quad\text{for all }j\in[k].
- \tag{A14}
+\end{aligned}
+\tag{A14}
 ```
 
 It has probability $`2^{-k}`$. On this event,
@@ -360,15 +388,19 @@ A small ideal cannot be generated by an arbitrary short coefficient hint. The fo
 Let $`v_i\neq0`$ be one error coefficient in a scalar hint, let $`t_i`$ be the number of its nonzero coefficients modulo $`p`$, and let $`r=\dim(\bar v_1,\ldots,\bar v_m)`$. Then
 
 ```math
+\begin{aligned}
 r\,t_i\geq N.
- \tag{A15}
+\end{aligned}
+\tag{A15}
 ```
 
 If, after multiplication by a monomial unit, the nonzero coefficients of $`v_i`$ lie in a coefficient window of length $`w`$, then also
 
 ```math
+\begin{aligned}
 r\geq N-w+1.
- \tag{A16}
+\end{aligned}
+\tag{A16}
 ```
 
 *Proof.* The principal ideal $`(v_i)`$ is spanned by the $`N`$ negacyclic shifts $`v_i,Xv_i,\ldots,X^{N-1}v_i`$. Let its dimension be $`r_i\leq r`$; the bar involution preserves dimensions. Choose $`r_i`$ of these shifts as a basis. Their supports must collectively cover all $`N`$ coefficient positions: otherwise every vector in their span would vanish at an uncovered position, whereas the full family of shifts of nonzero $`v_i`$ does not. Every basis shift has $`t_i`$ nonzero coefficients, giving $`r_i t_i\geq N`$ and hence (A15).
@@ -382,10 +414,12 @@ The support estimate is the elementary shift-span form of a finite-dimensional u
 Assume $`N`$ is a power of two. Let $`\widetilde v_i\in\mathbb Z[X]`$ be a degree-$`<N`$ integer lift of a nonzero error coefficient $`v_i\in R_p`$, and write $`B_i=\|\widetilde v_i\|_2`$ in the coefficient embedding. Then
 
 ```math
+\begin{aligned}
 p^{N-r}\leq B_i^N,
  \qquad
  r\geq N\bigl(1-\log_p B_i\bigr).
- \tag{A17}
+\end{aligned}
+\tag{A17}
 ```
 
 More generally, the same conclusion holds whenever $`\gcd(\widetilde v_i,X^N+1)=1`$ over $`\mathbb Q[X]`$.
