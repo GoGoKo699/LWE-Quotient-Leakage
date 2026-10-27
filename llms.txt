@@ -1,0 +1,29 @@
+# Quotient Leakage in Module-LWE
+
+This repository studies exact linear leakage in negacyclic Module-LWE, the public affine relations it forces, and a matching characterization of a leaked norm-parity bit. The scientific claims and proofs are in Markdown under science/; the reproducible finite checks are under verification/.
+
+## Scientific entry points
+
+- README.md: question, quantitative results, reading route, scope, and contact.
+- science/model.md: notation, coefficient embedding, finite-batch leakage model, genuine hint marginal, advantage convention, and adversary resources.
+- science/linear_leakage.md: affine-image law, scalar ideal dimension, composite coefficient rings, and short effective hints.
+- science/published_reduction.md: counterexample to Theorem 3.9 in the inspected April 7, 2024 Wang–Lai–Liu full version, including finite and asymptotic certificates.
+- science/norm_parity.md: the even-modulus norm-parity test and known-covariance connection.
+- science/gaussian_characterization.md: parity-preserving ideal, Gaussian lift, smoothing proof, normal-form conversion, source parameters, and sampler error.
+- science/interpretation.md: consequences, inherited ingredients, and boundaries of the positive statements.
+- references/RELATED_WORK.md: model-specific comparison with primary sources.
+- references/wll_source_audit.md: exact source identity and limits of the conference-version comparison.
+- references/references.bib: machine-readable citations.
+- verification/README.md: deterministic reproduction instructions and coverage.
+
+## Conventions that control the claims
+
+N is ring degree, k is module rank, and m is sample count. Advantages are differences of acceptance probabilities; WLL's guessing advantage is half this gap. The independent-response benchmark preserves the genuine hint marginal. Exact TV claims for arbitrary linear hints require uniform hidden variables; the public test's stated gap does not. Field ranks must be replaced by additive image cardinalities at composite coefficient modulus.
+
+The positive Gaussian theorem concerns only the norm-parity bit. Its ordinary-MLWE source has modulus q/2, width t/sqrt(8), and k+m ring samples. The constant-loss normal-form conversion is proved for power-of-two ring degree and modulus. Classical reductions also work with QPT distinguishers on classical inputs under the corresponding source assumption.
+
+The theorem counterexample does not establish an attack on the cited zero-knowledge protocol. Revealing a norm or covariance transfers the negative parity test, but the positive bit theorem does not establish hardness for the full descriptor. The public repository makes no claim to prove ordinary Module-LWE hardness.
+
+## Verification
+
+Run `python3 verification/run_all.py` from the repository root with Python 3.10 or later. The first three scripts use exact finite arithmetic; the Gaussian identity check uses floating-point arithmetic with explicit finite cutoffs. The scripts illustrate and check the written proofs.

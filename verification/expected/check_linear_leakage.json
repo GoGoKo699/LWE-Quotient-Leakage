@@ -1,0 +1,250 @@
+{
+  "composite_modulus_partial_image": {
+    "N": 1,
+    "consistency_test_gap": "5/16",
+    "full_transcript_tv": "5/16",
+    "hint_coordinates": 1,
+    "hint_image_size": 4,
+    "k": 1,
+    "m": 1,
+    "q": 4,
+    "residual_image_size_counts": {
+      "1": 1,
+      "2": 1,
+      "4": 2
+    }
+  },
+  "dependent_hint_coordinates": {
+    "N": 2,
+    "consistency_test_gap": "2/27",
+    "full_transcript_tv": "2/27",
+    "hint_coordinates": 2,
+    "hint_image_size": 3,
+    "k": 1,
+    "m": 1,
+    "q": 3,
+    "residual_image_size_counts": {
+      "1": 1,
+      "3": 8
+    }
+  },
+  "scalar_ideal_cases": [
+    {
+      "cancellation_feasible": true,
+      "case": "split quotient evaluation",
+      "correlated_hidden": {
+        "N": 2,
+        "consistency_test_gap": "4/25",
+        "full_transcript_tv": "576/625",
+        "hint_coordinates": 1,
+        "hint_image_size": 5,
+        "k": 1,
+        "m": 1,
+        "q": 5,
+        "residual_image_size_counts": {
+          "1": 5,
+          "5": 20
+        }
+      },
+      "gate_probability": "1/5",
+      "ideal_dimension": 1,
+      "uniform": {
+        "N": 2,
+        "consistency_test_gap": "4/25",
+        "full_transcript_tv": "4/25",
+        "hint_coordinates": 1,
+        "hint_image_size": 5,
+        "k": 1,
+        "m": 1,
+        "q": 5,
+        "residual_image_size_counts": {
+          "1": 5,
+          "5": 20
+        }
+      }
+    },
+    {
+      "cancellation_feasible": true,
+      "case": "split full ideal",
+      "correlated_hidden": {
+        "N": 2,
+        "consistency_test_gap": "4/125",
+        "full_transcript_tv": "24/25",
+        "hint_coordinates": 1,
+        "hint_image_size": 5,
+        "k": 1,
+        "m": 1,
+        "q": 5,
+        "residual_image_size_counts": {
+          "1": 1,
+          "5": 24
+        }
+      },
+      "gate_probability": "1/25",
+      "ideal_dimension": 2,
+      "uniform": {
+        "N": 2,
+        "consistency_test_gap": "4/125",
+        "full_transcript_tv": "4/125",
+        "hint_coordinates": 1,
+        "hint_image_size": 5,
+        "k": 1,
+        "m": 1,
+        "q": 5,
+        "residual_image_size_counts": {
+          "1": 1,
+          "5": 24
+        }
+      }
+    },
+    {
+      "cancellation_feasible": false,
+      "case": "infeasible secret target",
+      "correlated_hidden": {
+        "N": 2,
+        "consistency_test_gap": "0",
+        "full_transcript_tv": "24/25",
+        "hint_coordinates": 1,
+        "hint_image_size": 5,
+        "k": 1,
+        "m": 1,
+        "q": 5,
+        "residual_image_size_counts": {
+          "5": 25
+        }
+      },
+      "gate_probability": "0",
+      "ideal_dimension": 1,
+      "uniform": {
+        "N": 2,
+        "consistency_test_gap": "0",
+        "full_transcript_tv": "0",
+        "hint_coordinates": 1,
+        "hint_image_size": 5,
+        "k": 1,
+        "m": 1,
+        "q": 5,
+        "residual_image_size_counts": {
+          "5": 25
+        }
+      }
+    },
+    {
+      "cancellation_feasible": true,
+      "case": "irreducible quotient",
+      "correlated_hidden": {
+        "N": 2,
+        "consistency_test_gap": "2/27",
+        "full_transcript_tv": "8/9",
+        "hint_coordinates": 1,
+        "hint_image_size": 3,
+        "k": 1,
+        "m": 1,
+        "q": 3,
+        "residual_image_size_counts": {
+          "1": 1,
+          "3": 8
+        }
+      },
+      "gate_probability": "1/9",
+      "ideal_dimension": 2,
+      "uniform": {
+        "N": 2,
+        "consistency_test_gap": "2/27",
+        "full_transcript_tv": "2/27",
+        "hint_coordinates": 1,
+        "hint_image_size": 3,
+        "k": 1,
+        "m": 1,
+        "q": 3,
+        "residual_image_size_counts": {
+          "1": 1,
+          "3": 8
+        }
+      }
+    },
+    {
+      "cancellation_feasible": true,
+      "case": "ramified parity ideal",
+      "correlated_hidden": {
+        "N": 4,
+        "consistency_test_gap": "1/4",
+        "full_transcript_tv": "15/16",
+        "hint_coordinates": 1,
+        "hint_image_size": 2,
+        "k": 1,
+        "m": 1,
+        "q": 2,
+        "residual_image_size_counts": {
+          "1": 8,
+          "2": 8
+        }
+      },
+      "gate_probability": "1/2",
+      "ideal_dimension": 1,
+      "uniform": {
+        "N": 4,
+        "consistency_test_gap": "1/4",
+        "full_transcript_tv": "1/4",
+        "hint_coordinates": 1,
+        "hint_image_size": 2,
+        "k": 1,
+        "m": 1,
+        "q": 2,
+        "residual_image_size_counts": {
+          "1": 8,
+          "2": 8
+        }
+      }
+    },
+    {
+      "cancellation_feasible": true,
+      "case": "ramified intermediate ideal",
+      "correlated_hidden": {
+        "N": 4,
+        "consistency_test_gap": "1/8",
+        "full_transcript_tv": "225/256",
+        "hint_coordinates": 1,
+        "hint_image_size": 2,
+        "k": 1,
+        "m": 1,
+        "q": 2,
+        "residual_image_size_counts": {
+          "1": 4,
+          "2": 12
+        }
+      },
+      "gate_probability": "1/4",
+      "ideal_dimension": 2,
+      "uniform": {
+        "N": 4,
+        "consistency_test_gap": "1/8",
+        "full_transcript_tv": "1/8",
+        "hint_coordinates": 1,
+        "hint_image_size": 2,
+        "k": 1,
+        "m": 1,
+        "q": 2,
+        "residual_image_size_counts": {
+          "1": 4,
+          "2": 12
+        }
+      }
+    }
+  ],
+  "scope": "Exact finite examples; universal claims are proved in science/linear_leakage.md.",
+  "vector_hint": {
+    "N": 2,
+    "consistency_test_gap": "8/27",
+    "full_transcript_tv": "8/27",
+    "hint_coordinates": 2,
+    "hint_image_size": 9,
+    "k": 1,
+    "m": 1,
+    "q": 3,
+    "residual_image_size_counts": {
+      "3": 4,
+      "9": 5
+    }
+  }
+}

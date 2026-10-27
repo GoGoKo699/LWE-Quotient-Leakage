@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "convolution_tv_to_single_gaussian": 0.2159597228,
+      "each_input_omitted_unnormalized_mass_below_1e-100": true,
+      "source_width": 0.5,
+      "target_width_formula": "sqrt(8)*source_width",
+      "theta_identity_max_error_below_1e-13": true
+    },
+    {
+      "convolution_tv_to_single_gaussian": 0.1087879525,
+      "each_input_omitted_unnormalized_mass_below_1e-100": true,
+      "source_width": 1.0,
+      "target_width_formula": "sqrt(8)*source_width",
+      "theta_identity_max_error_below_1e-13": true
+    },
+    {
+      "convolution_tv_to_single_gaussian": 0.000935452,
+      "each_input_omitted_unnormalized_mass_below_1e-100": true,
+      "source_width": 2.0,
+      "target_width_formula": "sqrt(8)*source_width",
+      "theta_identity_max_error_below_1e-13": true
+    }
+  ],
+  "scope": "Finite floating-point consistency check; the analytic smoothing bounds are proved in the scientific account."
+}
