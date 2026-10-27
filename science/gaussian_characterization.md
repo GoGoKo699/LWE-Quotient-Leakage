@@ -3,9 +3,9 @@
 The parity obstruction admits a matching positive statement.  At an even
 modulus, a uniform transcript must preserve a public binary relation on a
 recognizable set of matrices.  We prove that, for sufficiently smoothed
-coefficient Gaussians at a pure power-of-two modulus, ordinary Module-LWE
+coefficient Gaussians at a pure power-of-two modulus $`q\ge4`$, ordinary Module-LWE
 accounts for every efficient distinguishing advantage beyond this relation.
-For other even moduli, we prove the corresponding statement from normal-form
+For other even moduli $`q\ge4`$, we prove the corresponding statement from normal-form
 Module-LWE.  The target of the reduction
 is a precisely defined, efficiently samplable distribution.  The result
 concerns the single norm-parity bit; it does not establish security when the
@@ -238,9 +238,9 @@ For every distinguisher $`\mathcal D`$, there is a distinguisher $`\mathcal B`$
 for normal-form Module-LWE at $`(R,q_0,k,m,s)`$ such that
 
 ```math
-\operatorname{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
+\mathrm{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
  \le
- \operatorname{Adv}_{\mathsf{NFReal}_{q_0,s},\mathsf{NFRand}_{q_0}}
+ \mathrm{Adv}_{\mathsf{NFReal}_{q_0,s},\mathsf{NFRand}_{q_0}}
                  (\mathcal B)+2\epsilon+2\delta.
  \tag{G9}
 ```
@@ -262,7 +262,7 @@ $`V=(V_S,V_E)\leftarrow D_{\mathbb Z^d,2s}`$ independently, and output
 \begin{aligned}
  A&=A_0+q_0K\pmod q,\\
  b&=2b_0+AV_S+V_E\pmod q,\\
- c&=\mathbf1^T\operatorname{coef}(V)\pmod2.
+ c&=\mathbf1^T\mathrm{coef}(V)\pmod2.
  \end{aligned}
  \tag{G10}
 ```
@@ -433,8 +433,8 @@ ordinary uniform-secret Module-LWE distinguisher $`\mathcal B'`$ with $`k+m`$
 samples, at the same source modulus $`q_0`$ and width $`s`$, satisfying
 
 ```math
-\operatorname{Adv}_{\mathrm{MLWE}(q_0,s,k+m)}(\mathcal B')
- =p_k\operatorname{Adv}_{\mathrm{NFMLWE}(q_0,s,m)}(\mathcal B),
+\mathrm{Adv}_{\mathrm{MLWE}(q_0,s,k+m)}(\mathcal B')
+ =p_k\mathrm{Adv}_{\mathrm{NFMLWE}(q_0,s,m)}(\mathcal B),
  \qquad
  p_k=\prod_{i=1}^{k}(1-2^{-i})>\frac14.
  \tag{G17}
@@ -497,9 +497,9 @@ $`q=2^a`$ with $`a\ge2`$.  For every $`\mathcal D`$ there is an ordinary
 uniform-secret Module-LWE distinguisher $`\mathcal B'`$ such that
 
 ```math
-\operatorname{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
+\mathrm{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
  \le
- \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
+ \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
        +2\epsilon+2\delta.
  \tag{G19}
 ```
@@ -508,13 +508,13 @@ Consequently,
 
 ```math
 \begin{aligned}
- \operatorname{Adv}_{\mathsf T_{q,t},\mathsf J_{\mathrm{fair}}}(\mathcal D)
+ \mathrm{Adv}_{\mathsf T_{q,t},\mathsf J_{\mathrm{fair}}}(\mathcal D)
  &\le 2^{-(k+1)}+
-       \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
+       \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
        +2\epsilon+2\delta,\\
- \operatorname{Adv}_{\mathsf T_{q,t},\mathsf J_t}(\mathcal D)
+ \mathrm{Adv}_{\mathsf T_{q,t},\mathsf J_t}(\mathcal D)
  &\le 2^{-(k+1)}+(1-2^{-k})\alpha_t+
-       \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
+       \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
        +2\epsilon+2\delta.
  \end{aligned}
  \tag{G20}

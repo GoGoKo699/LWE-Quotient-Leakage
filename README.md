@@ -12,12 +12,12 @@ Here $`N`$ is the ring degree, $`k`$ the module rank, and $`m`$ the number of ri
 
 | Result | Quantitative statement | Proof and scope |
 |---|---|---|
-| Fixed vector-linear leakage | With $`D_A=H_S-H_EM_A`$, the public consistency test has gap $`\mathbb E_A[1-\lvert\operatorname{Im}D_A\rvert/\lvert\operatorname{Im}H\rvert]`$. | [Affine-image law](science/linear_leakage.md#theorem-a1-affine-image-law). The gap holds for every hidden law independent of the public matrix; it is the full statistical distance for uniform hidden variables. |
+| Fixed vector-linear leakage | With $`D_A=H_S-H_EM_A`$, the public consistency test has gap $`\mathbb E_A[1-\lvert\mathrm{Im}\,D_A\rvert/\lvert\mathrm{Im}\,H\rvert]`$. | [Affine-image law](science/linear_leakage.md#theorem-a1-affine-image-law). The gap holds for every hidden law independent of the public matrix; it is the full statistical distance for uniform hidden variables. |
 | Scalar hint over a prime residue field | A feasible cancellation event has probability $`p^{-kr}`$ and gap $`(1-1/p)p^{-kr}`$, where $`r`$ is the dimension of the error-hint ideal. | [Ideal-dimension law](science/linear_leakage.md#theorem-a2-scalar-ideal-dimension-law). Includes repeated-root rings; composite coefficient rings use additive image cardinalities. |
 | Written finite-batch reduction | For $`N=4,q=17,k=1`$, a legal fixed hint gives decision gap $`16/289`$, while source recovery is at most $`1/4913`$, against the stated lower bound $`288/289`$. | [Counterexample](science/published_reduction.md). A growing polynomial-parameter family gives the asymptotic contradiction. The claim is pinned to the inspected April 7, 2024 full version of Wang–Lai–Liu. |
-| Norm parity at even modulus | Leaking $`(\|S\|^2+\|E\|^2)\bmod2`$ gives an exact test gap $`2^{-(k+1)}`$, including $`1/4`$ at rank one. | [Norm-parity obstruction](science/norm_parity.md). No Gaussian, independence between secret and error, or small-noise hypothesis is needed. |
-| Matching Gaussian reduction | Beyond the parity-preserving ideal, advantage is at most ordinary-MLWE advantage divided by $`p_k>1/4`$, plus $`2\epsilon+2\delta`$. | [Gaussian characterization](science/gaussian_characterization.md#corollary-g4-ordinary-mlwe-characterization). Source modulus $`q/2`$, source width $`t/\sqrt8`$, $`k+m`$ samples; power-of-two ring degree and modulus, and explicit smoothing. |
-| Short or sparse effective hints | Support size $`u`$ gives $`ru\ge N`$; coefficient norm $`B`$ gives $`p^{N-r}\le B^N`$ in the cyclotomic case. | [Effective-hint bounds](science/linear_leakage.md#when-effective-hints-are-short-or-sparse). These bound the identified cancellation attack and do not prove general leakage hardness. |
+| Norm parity at even modulus | Leaking $`(\Vert S\Vert^2+\Vert E\Vert^2)\bmod2`$ gives an exact test gap $`2^{-(k+1)}`$, including $`1/4`$ at rank one. | [Norm-parity obstruction](science/norm_parity.md). No Gaussian, independence between secret and error, or small-noise hypothesis is needed. |
+| Matching Gaussian reduction | Beyond the parity-preserving ideal, advantage is at most ordinary-MLWE advantage divided by $`p_k>1/4`$, plus $`2\epsilon+2\delta`$. | [Gaussian characterization](science/gaussian_characterization.md#corollary-g4-ordinary-mlwe-characterization). Source modulus $`q/2`$, source width $`t/\sqrt8`$, $`k+m`$ samples; power-of-two ring degree $`N\ge2`$ and modulus $`q\ge4`$, with explicit smoothing. |
+| Short or sparse effective hints | For a nonzero effective error coefficient, support size $`u`$ gives $`ru\ge N`$; an integer lift of coefficient norm $`B`$ gives $`p^{N-r}\le B^N`$ in the cyclotomic case. | [Effective-hint bounds](science/linear_leakage.md#when-effective-hints-are-short-or-sparse). These bound the identified cancellation attack and do not prove general leakage hardness. |
 
 The independent-response experiment retains the **genuine marginal distribution of the hint**. The exact Gaussian analysis tracks the small bias of the norm-parity bit; it does not replace that bit by a fair coin without charging the difference.
 
@@ -51,6 +51,12 @@ This relation also specifies the appropriate positive comparison: sample a unifo
 6. [Interpretation and limits](science/interpretation.md) assembles the cryptographic consequences and boundaries.
 
 [Related work](references/RELATED_WORK.md) compares the nearest results and identifies inherited ingredients. The [WLL source audit](references/wll_source_audit.md) records the inspected version and the limit of the conference-version comparison. Machine-readable citations are in [references.bib](references/references.bib).
+
+## Learning route
+
+The [learning entry point](learning/README.md) connects Chris Peikert's *A Decade of Lattice Cryptography* (2016) to this project. The [Peikert bridge](learning/PEIKERT_BRIDGE.md) translates its notation and assumptions, develops a complete small parity example, and explains the additional leakage and Gaussian arguments. The [30-milestone map](learning/MILESTONES.md) organizes the background and research narrative into a shared sequence of conceptual targets, dependencies, and source pointers.
+
+The learning route complements the direct scientific route above. Exact statements and proofs remain in their topic pages under `science/`.
 
 ## Reproduce the finite checks
 

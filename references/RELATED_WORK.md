@@ -47,7 +47,7 @@ The positive statement is built from established Gaussian and LWE reductions. Th
 | Normal form | Applebaum–Cash–Peikert–Sahai, [*Fast Cryptographic Primitives and Circular-Secure Encryption Based on Hard Learning Problems*](https://www.wisdom.weizmann.ac.il/~bennyap/pubs/kdm-learning.pdf), CRYPTO 2009, Lemma 2 | Eliminate a uniform secret using an invertible sample block. The local-ring specialization here proves its own invertibility probability and exact $`k`$-sample cost. |
 | Modulus transformations | Brakerski–Langlois–Peikert–Regev–Stehlé, [*Classical Hardness of Learning with Errors*](https://arxiv.org/abs/1306.0281), STOC 2013, Theorem 3.1 | Prior general modulus-and-dimension machinery. The integral doubling map used here has a separately proved joint law with parity. |
 
-The specialized conclusion is a reduction from the norm-parity transcript to its explicitly samplable parity-preserving ideal. For power-of-two parameters it uses an ordinary uniform-secret MLWE source at half the target modulus and width $`1/\sqrt8`$ of the target width. The theorem does not claim a new general convolution method, nor hardness for a full norm or covariance descriptor.
+The specialized conclusion is a reduction from the norm-parity transcript to its explicitly samplable parity-preserving ideal. For power-of-two ring degree $`N\ge2`$ and modulus $`q\ge4`$, it uses an ordinary uniform-secret MLWE source at half the target modulus and width $`1/\sqrt8`$ of the target width. The theorem does not claim a new general convolution method, nor hardness for a full norm or covariance descriptor.
 
 ## Contribution and limits of the comparison
 

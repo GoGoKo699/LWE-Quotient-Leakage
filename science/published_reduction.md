@@ -121,7 +121,7 @@ The attack also applies directly to WLL's HNF secret-and-error decision game: ig
 More generally, let $`\rho:R_q\to\mathbb F_{q^c}`$ be a surjective ring homomorphism and fix $`\beta\ne0`$ in that field. The base-field scalar
 
 ```math
-H=\operatorname{Tr}_{\mathbb F_{q^c}/\mathbb F_q}
+H=\mathrm{Tr}_{\mathbb F_{q^c}/\mathbb F_q}
        (\beta\rho(E_1))
 ```
 
@@ -232,7 +232,7 @@ Set
 
 ```math
 N=4,\quad q=17,\quad \alpha=2,\quad k=m=\kappa=1,\qquad
-\chi=\operatorname{Unif}\{-8,\ldots,8\}^{4}.
+\chi=\mathrm{Unif}\{-8,\ldots,8\}^{4}.
 ```
 
 The polynomial $`X^4+1`$ has the four distinct roots $`2,8,9,15`$ modulo $`17`$, and $`17\ge4^2`$. The legal hint is
@@ -275,7 +275,7 @@ For example, Xylouris proves the sufficient bound $`L=5.2`$ in Theorem 1.1 of th
 Since $`1`$ is not prime, $`q_N\ge2N^2+1`$. Since $`2N`$ divides $`q_N-1`$, $`X^N+1`$ splits into distinct linear factors in $`\mathbb F_{q_N}`$. Consequently,
 
 ```math
-q_N\ge N^2,\qquad q_N=\operatorname{poly}(\lambda),\qquad
+q_N\ge N^2,\qquad q_N=\mathrm{poly}(\lambda),\qquad
 \ell=N,\qquad c=1.
 ```
 

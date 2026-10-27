@@ -94,10 +94,10 @@ K=\sum_{j=1}^{k}S_j\overline{S_j}
 For a polynomial $`f=\sum_{a=0}^{N-1}f_aX^a`$, expansion of $`f\bar f`$ shows
 
 ```math
-\operatorname{ct}(f\bar f)=\sum_{a=0}^{N-1}f_a^2.
+\mathrm{ct}(f\bar f)=\sum_{a=0}^{N-1}f_a^2.
 ```
 
-Only equal exponents contribute to the constant coefficient, since their differences lie strictly between $`-N`$ and $`N`$. Hence $`\operatorname{ct}(K)=C`$, and the test needs only the low bit of that coefficient. The same conclusion holds if the descriptor reveals $`K\bmod q`$, because $`q`$ is even.
+Only equal exponents contribute to the constant coefficient, since their differences lie strictly between $`-N`$ and $`N`$. Hence $`\mathrm{ct}(K)=C`$, and the test needs only the low bit of that coefficient. The same conclusion holds if the descriptor reveals $`K\bmod q`$, because $`q`$ is even.
 
 At $`k=1`$, (N4) is the covariance descriptor in Micciancio–Suhl's Known-Covariance RLWE definition. Thus Theorem N1 gives advantage $`1/4`$ against its independent-sample benchmark throughout the even-modulus regime. For $`k>1`$, the theorem applies to the explicitly specified module analogue whenever its hint reveals the parity of the constant coefficient of (N4). [MS2025, Definition 12, p. 16](https://cic.iacr.org/p/1/4/2/pdf).
 
@@ -179,8 +179,8 @@ The simple gate test still has advantage **exactly** $`2^{-(k+1)}`$ between the 
 The [matching Gaussian theorem](gaussian_characterization.md) proves that, at a pure power-of-two modulus $`q\ge4`$, Gaussian norm parity is computationally indistinguishable from $`\mathsf I_q`$ under ordinary uniform-secret Module-LWE at modulus $`q/2`$ and width $`s=t/\sqrt8`$, with $`k`$ extra samples. Its explicit reduction bound is
 
 ```math
-\operatorname{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
-\le \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B)}{p_k}
+\mathrm{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
+\le \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B)}{p_k}
      +2\epsilon+2\delta,
 \qquad p_k=\prod_{i=1}^{k}(1-2^{-i})>\frac14,
 ```

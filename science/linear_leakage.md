@@ -13,7 +13,7 @@ R=\mathbb Z[X]/(X^N+1),\qquad
  R_q=(\mathbb Z/q\mathbb Z)[X]/(X^N+1).
 ```
 
-Let $`p`$ be a prime divisor of the ciphertext modulus $`q`$. Coefficientwise reduction gives a surjective ring map $`R_q\longrightarrow R_p`$. Every ring element is represented in the basis $`1,X,\ldots,X^{N-1}`$; $`\operatorname{coef}`$ denotes this coefficient vector. A bar denotes the involution
+Let $`p`$ be a prime divisor of the ciphertext modulus $`q`$. Coefficientwise reduction gives a surjective ring map $`R_q\longrightarrow R_p`$. Every ring element is represented in the basis $`1,X,\ldots,X^{N-1}`$; $`\mathrm{coef}`$ denotes this coefficient vector. A bar denotes the involution
 
 ```math
 \bar f=f(X^{-1}),
@@ -61,7 +61,7 @@ For a fixed public matrix $`A`$, define
 
 ```math
 D_A=H_S-H_EM_A,\qquad
- W=\operatorname{Im}H,\qquad W_A=\operatorname{Im}D_A.
+ W=\mathrm{Im}\,H,\qquad W_A=\mathrm{Im}\,D_A.
 ```
 
 Both images are subspaces of $`\mathbb F_p^\ell`$. Write $`r_H=\dim W`$ and $`r_A=\dim W_A`$.
@@ -101,7 +101,7 @@ More precisely, conditional on $`A,B`$, the real hint is uniform on $`H_E\mathbf
 
 #### (iii) Compatible experiment.
 
-Define $`\mathsf I_H`$ by sampling uniform independent $`A,U`$ and then sampling $`h`$ uniformly on $`H_E\mathbf u+W_A`$, where $`\mathbf u=\operatorname{coef}(U\bmod p)`$. For uniform independent $`S,E`$, the identity
+Define $`\mathsf I_H`$ by sampling uniform independent $`A,U`$ and then sampling $`h`$ uniformly on $`H_E\mathbf u+W_A`$, where $`\mathbf u=\mathrm{coef}(U\bmod p)`$. For uniform independent $`S,E`$, the identity
 
 ```math
 \mathsf T_{\mathcal D,H}=\mathsf I_H
@@ -119,7 +119,7 @@ h=H_E\mathbf b+D_A\mathbf s.
 This proves the support constraint. We also have
 
 ```math
-W=W_A+\operatorname{Im}H_E.
+W=W_A+\mathrm{Im}\,H_E.
  \tag{A4}
 ```
 
@@ -141,10 +141,10 @@ The theorem separates two statements that should not be conflated. For arbitrary
 
 ## Scalar hints and the ideal-dimension formula
 
-Write $`\operatorname{ct}(f)`$ for the constant coefficient of the canonical representative of $`f\in R_p`$. The identity
+Write $`\mathrm{ct}(f)`$ for the constant coefficient of the canonical representative of $`f\in R_p`$. The identity
 
 ```math
-\operatorname{ct}(\bar v x)
+\mathrm{ct}(\bar v x)
  =\sum_{a=0}^{N-1}v_ax_a
  \tag{A5}
 ```
@@ -152,7 +152,7 @@ Write $`\operatorname{ct}(f)`$ for the constant coefficient of the canonical rep
 shows that this pairing is nondegenerate. To see the identity directly, expand $`\bar v x=\sum_{a,b}v_ax_bX^{b-a}`$: since $`-(N-1)\leq b-a\leq N-1`$, only $`a=b`$ contributes to the constant term. Thus every scalar coefficient-linear hint can be written uniquely as
 
 ```math
-h=\operatorname{ct}\left(
+h=\mathrm{ct}\left(
        \sum_{j=1}^k\bar u_jS_j+
        \sum_{i=1}^m\bar v_iE_i\right),
  \qquad u\in R_p^k,\quad v\in R_p^m.
@@ -189,7 +189,7 @@ If some $`\bar u_j\notin I`$, then $`G_{u,v}`$ is empty. Otherwise,
 On $`G_{u,v}`$, the public sample forces
 
 ```math
-h=\operatorname{ct}\left(\sum_i\bar v_iB_i\right).
+h=\mathrm{ct}\left(\sum_i\bar v_iB_i\right).
  \tag{A9}
 ```
 
@@ -215,13 +215,13 @@ R_p^m\longrightarrow R_p,
 
 has image exactly $`I`$. Applied to uniform input it is uniform on $`I`$. The $`k`$ matrix columns are independent, proving the event probability. Substituting $`E=B-AS`$ into (A6) proves (A9) on the event.
 
-In the independent experiment, for any fixed hint value, the scalar $`\operatorname{ct}(\sum_i\bar v_iU_i)`$ is uniform in $`\mathbb F_p`$: $`v\neq0`$ and nondegeneracy of (A5) make it a nonzero linear functional of a uniform vector. This gives the claimed gap.
+In the independent experiment, for any fixed hint value, the scalar $`\mathrm{ct}(\sum_i\bar v_iU_i)`$ is uniform in $`\mathbb F_p`$: $`v\neq0`$ and nondegeneracy of (A5) make it a nonzero linear functional of a uniform vector. This gives the claimed gap.
 
 For completeness, the vector-hint theorem also proves exactness under uniform hidden variables. The residual scalar functional is
 
 ```math
 (S_j)_j\longmapsto
- \operatorname{ct}\left(\sum_j
+ \mathrm{ct}\left(\sum_j
     \left(\bar u_j-\sum_i\bar v_iA_{ij}\right)S_j\right).
 ```
 
@@ -284,7 +284,7 @@ If the hint instead takes values in $`(\mathbb Z/t\mathbb Z)^\ell`$ for a compos
  \tag{A12}
 ```
 
-The same public affine-support test has this exact acceptance gap for every hidden law, and this is the exact statistical distance for uniform independent hidden variables. The proof of Theorem A1 uses only uniformity under homomorphisms of finite additive groups and the identity $`W=W_A+\operatorname{Im}H_E`$, so it applies without change. Image cardinalities can be evaluated by integer Smith normal form, or by a prime-power CRT decomposition.
+The same public affine-support test has this exact acceptance gap for every hidden law, and this is the exact statistical distance for uniform independent hidden variables. The proof of Theorem A1 uses only uniformity under homomorphisms of finite additive groups and the identity $`W=W_A+\mathrm{Im}\,H_E`$, so it applies without change. Image cardinalities can be evaluated by integer Smith normal form, or by a prime-power CRT decomposition.
 
 Field ranks cannot simply be substituted at composite modulus. A nonzero scalar linear map over $`\mathbb Z/t\mathbb Z`$ can have a proper nonzero image. For example, take $`N=k=m=1`$, $`q=t=4`$, the hint $`h=E`$, and uniform independent $`S,E`$. For $`A=0,1,2,3`$, respectively, the image of the residual map $`S\mapsto-AS`$ has cardinality $`1,4,2,4`$. Consequently,
 
@@ -349,7 +349,7 @@ For comparison with known-covariance formulations, let
 K=\sum_j S_j\bar S_j+\sum_i E_i\bar E_i.
 ```
 
-By (A5), $`\operatorname{ct}(K)`$ is the sum of the coefficient squared norms as an integer, or its residue if $`K`$ is given modulo $`q`$. At even modulus its parity therefore reveals (A13). The negative corollary applies to an experiment revealing $`K`$, or the full integer norm, because either reveals this bit. The positive matching theorem for the bit must not be promoted to a theorem for the complete covariance or the complete norm. The relevant known-covariance definition appears in [Micciancio–Suhl (2025)](https://cic.iacr.org/p/1/4/2); the odd-prime decision attacks in [Bkakria (2026)](https://eprint.iacr.org/2026/2638) are a separate comparator.
+By (A5), $`\mathrm{ct}(K)`$ is the sum of the coefficient squared norms as an integer, or its residue if $`K`$ is given modulo $`q`$. At even modulus its parity therefore reveals (A13). The negative corollary applies to an experiment revealing $`K`$, or the full integer norm, because either reveals this bit. The positive matching theorem for the bit must not be promoted to a theorem for the complete covariance or the complete norm. The relevant known-covariance definition appears in [Micciancio–Suhl (2025)](https://cic.iacr.org/p/1/4/2); the odd-prime decision attacks in [Bkakria (2026)](https://eprint.iacr.org/2026/2638) are a separate comparator.
 
 ## When effective hints are short or sparse
 
@@ -412,7 +412,7 @@ has effective coefficient vector
 \sum_{a=1}^{a_0}\bar c_a z_a,
 ```
 
-because $`\langle z,cx\rangle=\operatorname{ct}(\bar zcx) =\langle\bar c z,x\rangle`$. Arbitrary ring multipliers $`c_a`$ can destroy shortness or sparsity of the effective vector even when each displayed $`z_a`$ is short. For specified integer lifts, the elementary negacyclic convolution estimate
+because $`\langle z,cx\rangle=\mathrm{ct}(\bar zcx) =\langle\bar c z,x\rangle`$. Arbitrary ring multipliers $`c_a`$ can destroy shortness or sparsity of the effective vector even when each displayed $`z_a`$ is short. For specified integer lifts, the elementary negacyclic convolution estimate
 
 ```math
 \left\|\sum_a\bar c_a z_a\right\|_2

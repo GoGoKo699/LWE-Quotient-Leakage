@@ -26,15 +26,15 @@ The involution and the constant-coefficient functional are
 
 ```math
 x^\star=x(X^{-1}),\qquad
-\operatorname{ct}(x)=x_0.
+\mathrm{ct}(x)=x_0.
 ```
 
 Since $`X^{-1}=-X^{N-1}`$, the pairing satisfies
 
 ```math
-\operatorname{ct}(v^\star x)=\sum_{a=0}^{N-1}v_a x_a,
+\mathrm{ct}(v^\star x)=\sum_{a=0}^{N-1}v_a x_a,
 \qquad
-\operatorname{ct}(x^\star x)=\|x\|_{\mathrm{coef}}^2.
+\mathrm{ct}(x^\star x)=\|x\|_{\mathrm{coef}}^2.
 ```
 
 The notation $`\bar x`$ in later chapters denotes the same involution as $`x^\star`$. The first identity holds over every coefficient modulus. The second holds over the integers before reduction.
@@ -89,16 +89,16 @@ A source that answers repeated requests for separate hints on sub-batches is a d
 Throughout this repository, distinguishing advantage means an acceptance-probability difference:
 
 ```math
-\operatorname{Adv}_{P,Q}(\mathcal D)
+\mathrm{Adv}_{P,Q}(\mathcal D)
 =\left|\Pr[\mathcal D(P)=1]-\Pr[\mathcal D(Q)=1]\right|.
 ```
 
-If a challenger chooses equally between $`P`$ and $`Q`$, the best success probability is $`1/2+\operatorname{TV}(P,Q)/2`$. A convention that defines advantage as success minus $`1/2`$ therefore differs by a factor of two. The Wang-Lai-Liu comparison uses that paper's convention explicitly when substituting its numerical theorem parameters.
+If a challenger chooses equally between $`P`$ and $`Q`$, the best success probability is $`1/2+\mathrm{TV}(P,Q)/2`$. A convention that defines advantage as success minus $`1/2`$ therefore differs by a factor of two. The Wang-Lai-Liu comparison uses that paper's convention explicitly when substituting its numerical theorem parameters.
 
 For finite distributions,
 
 ```math
-\operatorname{TV}(P,Q)=\frac12\sum_z|P(z)-Q(z)|.
+\mathrm{TV}(P,Q)=\frac12\sum_z|P(z)-Q(z)|.
 ```
 
 The algebraic tests give exact probability differences for every allowed hidden distribution. Their optimality as the full statistical distance is established when the hidden variables are uniform. For Gaussian hidden variables, the separate reduction gives computational bounds.
@@ -132,7 +132,7 @@ The width convention is
 \qquad Z\sim D_{\mathbb Z^a,s}.
 ```
 
-The positive theorem uses normal-form Module-LWE modulo $`q/2`$ and then proves a constant-loss conversion from the ordinary uniform-secret assumption when $`q`$ and $`N`$ are powers of two. All sample counts, width changes, smoothing conditions, and sampling errors appear in [the Gaussian theorem](gaussian_characterization.md). Ordinary Module-LWE hardness is an assumption, not a result proved here.
+The positive theorem uses normal-form Module-LWE modulo $`q/2`$ and then proves a constant-loss conversion from the ordinary uniform-secret assumption when $`q\ge4`$ and $`N\ge2`$ are powers of two. All sample counts, width changes, smoothing conditions, and sampling errors appear in [the Gaussian theorem](gaussian_characterization.md). Ordinary Module-LWE hardness is an assumption, not a result proved here.
 
 ## 6. Adversaries and resources
 
