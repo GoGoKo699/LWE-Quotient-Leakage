@@ -1,0 +1,46 @@
+{
+  "arbitrary_integer_checks": {
+    "cases": 1500,
+    "failure_count": 0,
+    "scope": "finite arithmetic checks only"
+  },
+  "binary_exact": [
+    {
+      "gate_probability": "1/2",
+      "k": 1,
+      "m": 2,
+      "projection_tv": "1/4",
+      "random_reject_probability": "1/4",
+      "real_reject_probability": "0",
+      "weighted_transcripts_per_branch": 128
+    },
+    {
+      "gate_probability": "1/4",
+      "k": 2,
+      "m": 2,
+      "projection_tv": "1/8",
+      "random_reject_probability": "1/8",
+      "real_reject_probability": "0",
+      "weighted_transcripts_per_branch": 1024
+    },
+    {
+      "gate_probability": "1/8",
+      "k": 3,
+      "m": 2,
+      "projection_tv": "1/16",
+      "random_reject_probability": "1/16",
+      "real_reject_probability": "0",
+      "weighted_transcripts_per_branch": 8192
+    }
+  ],
+  "negacyclic_exact": {
+    "full_mod4_transcript_tv_with_parity_hint": "1/4",
+    "k": 1,
+    "m": 1,
+    "n": 2,
+    "q": 4,
+    "random_reject_probability": "1/4",
+    "real_reject_probability": "0",
+    "weighted_transcripts_per_branch": 65536
+  }
+}
