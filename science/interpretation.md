@@ -9,7 +9,7 @@ A scalar hint over a field contains at most one field element, but its position 
 The vector formulation exposes the same effect without requiring a scalar, a field, or a CRT decomposition. After writing $`\mathbf e=\mathbf b-M_A\mathbf s`$, a hint $`h=H_S\mathbf s+H_E\mathbf e`$ obeys
 
 ```math
-h-H_E\mathbf b\in\operatorname{Im}(H_S-H_EM_A).
+h-H_E\mathbf b\in\mathrm{Im}\,(H_S-H_EM_A).
 ```
 
 For arbitrary hidden distributions, this is a necessary relation and gives the stated test advantage. For uniform hidden variables, it describes the whole discrepancy from the independent-response experiment. At composite modulus, proper nonzero images also matter. The modulus-four example in the [algebra chapter](linear_leakage.md#prime-residue-fields-and-composite-coefficient-rings) has distance $`5/16`$, of which complete cancellation accounts for only $`3/16`$.
@@ -30,7 +30,7 @@ Norm parity has unusually small algebraic support. Modulo two, squaring an integ
 
 The corresponding distinguishing gap $`2^{-(k+1)}`$ is constant at fixed module rank. It falls exponentially as the rank increases: it is inverse polynomial when $`k=O(\log\lambda)`$ and becomes negligible when $`k=\omega(\log\lambda)`$, for security parameter $`\lambda`$. These are statements about this test. A smaller test gap does not by itself establish computational hardness.
 
-The [Gaussian characterization](gaussian_characterization.md) supplies the separate positive statement. For power-of-two ring degree and modulus, target coefficient width $`t=\sqrt8s`$, and
+The [Gaussian characterization](gaussian_characterization.md) supplies the separate positive statement. For power-of-two ring degree $`N\ge2`$ and modulus $`q\ge4`$, target coefficient width $`t=\sqrt8s`$, and
 
 ```math
 s/\sqrt2\ge\eta_\epsilon(\mathbb Z^{N(k+m)}),

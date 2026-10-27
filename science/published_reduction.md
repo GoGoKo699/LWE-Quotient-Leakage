@@ -76,7 +76,9 @@ H=\rho(E_1)
 admits a polynomial-time test with probability gap
 
 ```math
+\begin{aligned}
 \Delta=q^{-k}(1-q^{-1}).
+\end{aligned}
 \tag{1}
 ```
 
@@ -121,7 +123,7 @@ The attack also applies directly to WLL's HNF secret-and-error decision game: ig
 More generally, let $`\rho:R_q\to\mathbb F_{q^c}`$ be a surjective ring homomorphism and fix $`\beta\ne0`$ in that field. The base-field scalar
 
 ```math
-H=\operatorname{Tr}_{\mathbb F_{q^c}/\mathbb F_q}
+H=\mathrm{Tr}_{\mathbb F_{q^c}/\mathbb F_q}
        (\beta\rho(E_1))
 ```
 
@@ -140,7 +142,9 @@ Thus the quotient mechanism also covers the constant residue-degree regime in th
 Let $`\chi`$ be uniform on the centered coefficient representatives
 
 ```math
+\begin{aligned}
 \left\{-\frac{q-1}{2},\ldots,\frac{q-1}{2}\right\}^{N}\subset R.
+\end{aligned}
 \tag{2}
 ```
 
@@ -153,7 +157,9 @@ For every source batch size $`m`$, every chosen coefficient-linear scalar hint $
 has success probability at most
 
 ```math
+\begin{aligned}
 q^{1-Nk}.
+\end{aligned}
 \tag{3}
 ```
 
@@ -178,7 +184,9 @@ H=u^\top S+v^\top E.
 After fixing $`A`$ and $`B`$, substitute $`E=B-T_A S`$:
 
 ```math
+\begin{aligned}
 H=v^\top B+(u^\top-v^\top T_A)S.
+\end{aligned}
 \tag{4}
 ```
 
@@ -199,15 +207,19 @@ No global shortness restriction on $`\chi`$ is imposed by the formal theorem or 
 Theorem 3.9 permits prime $`q`$ with distinct constant-degree prime-ideal factors, $`\ell=N/c`$, and $`q\ge\ell^2`$. It claims a reduction from the finite-batch search problem with one error hint to a decision problem, with source sample count
 
 ```math
+\begin{aligned}
 \overline m^{\,*}
 =\ell q^c mk\left\lceil\frac1{\epsilon^2}\right\rceil
+\end{aligned}
 \tag{5}
 ```
 
 and source recovery probability at least
 
 ```math
+\begin{aligned}
 1-\frac{\epsilon}{8}.
+\end{aligned}
 \tag{6}
 ```
 
@@ -216,7 +228,9 @@ See the [source audit](../references/wll_source_audit.md) for the exact statemen
 Take $`k=m=\kappa=1`$ and a fully split prime, so $`c=1`$ and $`\ell=N`$. Proposition 1 gives a target solver with WLL advantage
 
 ```math
+\begin{aligned}
 \epsilon=\frac{q-1}{2q^2}.
+\end{aligned}
 \tag{7}
 ```
 
@@ -232,7 +246,7 @@ Set
 
 ```math
 N=4,\quad q=17,\quad \alpha=2,\quad k=m=\kappa=1,\qquad
-\chi=\operatorname{Unif}\{-8,\ldots,8\}^{4}.
+\chi=\mathrm{Unif}\{-8,\ldots,8\}^{4}.
 ```
 
 The polynomial $`X^4+1`$ has the four distinct roots $`2,8,9,15`$ modulo $`17`$, and $`17\ge4^2`$. The legal hint is
@@ -275,7 +289,7 @@ For example, Xylouris proves the sufficient bound $`L=5.2`$ in Theorem 1.1 of th
 Since $`1`$ is not prime, $`q_N\ge2N^2+1`$. Since $`2N`$ divides $`q_N-1`$, $`X^N+1`$ splits into distinct linear factors in $`\mathbb F_{q_N}`$. Consequently,
 
 ```math
-q_N\ge N^2,\qquad q_N=\operatorname{poly}(\lambda),\qquad
+q_N\ge N^2,\qquad q_N=\mathrm{poly}(\lambda),\qquad
 \ell=N,\qquad c=1.
 ```
 

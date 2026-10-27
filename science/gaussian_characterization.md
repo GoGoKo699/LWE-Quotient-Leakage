@@ -3,9 +3,9 @@
 The parity obstruction admits a matching positive statement.  At an even
 modulus, a uniform transcript must preserve a public binary relation on a
 recognizable set of matrices.  We prove that, for sufficiently smoothed
-coefficient Gaussians at a pure power-of-two modulus, ordinary Module-LWE
+coefficient Gaussians at a pure power-of-two modulus $`q\ge4`$, ordinary Module-LWE
 accounts for every efficient distinguishing advantage beyond this relation.
-For other even moduli, we prove the corresponding statement from normal-form
+For other even moduli $`q\ge4`$, we prove the corresponding statement from normal-form
 Module-LWE.  The target of the reduction
 is a precisely defined, efficiently samplable distribution.  The result
 concerns the single norm-parity bit; it does not establish security when the
@@ -57,9 +57,11 @@ It is well defined because both $`q`$ and $`(X^N+1)(1)=2`$ vanish modulo two.
 For a public matrix $`A\in R_q^{m\times k}`$, let
 
 ```math
+\begin{aligned}
 \mathcal G(A):\quad
  \sum_{i=1}^{m}\phi(A_{ij})=1\quad\text{for every }j\in\{1,\ldots,k\}.
- \tag{G1}
+\end{aligned}
+\tag{G1}
 ```
 
 The real norm-parity transcript $`\mathsf T_{q,t}`$ is sampled as follows:
@@ -78,8 +80,10 @@ All randomness in the first two lines is independent.  Integer squares
 satisfy $`z^2=z\pmod2`$, so
 
 ```math
+\begin{aligned}
 c=\sum_{j=1}^{k}\phi(S_j)+\sum_{i=1}^{m}\phi(E_i).
- \tag{G2}
+\end{aligned}
+\tag{G2}
 ```
 
 The *constraint-preserving ideal* $`\mathsf I_q`$ samples
@@ -87,12 +91,14 @@ $`A\leftarrow U(R_q^{m\times k})`$ and $`u\leftarrow U(R_q^m)`$ independently,
 and then sets
 
 ```math
+\begin{aligned}
 c=\begin{cases}
        \sum_i\phi(u_i),&\mathcal G(A),\\
        \text{an independent uniform bit},&\neg\mathcal G(A).
     \end{cases}
  \qquad\text{Return }(A,u,c).
- \tag{G3}
+\end{aligned}
+\tag{G3}
 ```
 
 We also distinguish two independent benchmarks.  In $`\mathsf J_{\mathrm{fair}}`$,
@@ -131,8 +137,10 @@ Given $`z`$, the vector $`r_S`$ remains uniform and
 $`r_E=z-M_A r_S`$.  Consequently
 
 ```math
+\begin{aligned}
 c=\mathbf1^Tz+(\mathbf1+M_A^T\mathbf1)^T r_S.
- \tag{G4}
+\end{aligned}
+\tag{G4}
 ```
 
 A nonzero binary linear functional of a uniform vector is fair.  Every column
@@ -146,8 +154,10 @@ For uniform $`A`$, its $`k`$ augmentation column sums are independent fair bits;
 therefore
 
 ```math
+\begin{aligned}
 \Pr[\mathcal G(A)]=2^{-k}.
- \tag{G5}
+\end{aligned}
+\tag{G5}
 ```
 
 Moreover, the identity
@@ -184,12 +194,14 @@ $`\sum_i\phi(u_i)`$ gives distance $`1/2`$, regardless of that marginal.
 For independent coefficient Gaussians, the bias has the exact expression
 
 ```math
+\begin{aligned}
 \alpha_t=\frac12\left|
     \frac{\sum_{z\in\mathbb Z}(-1)^z e^{-\pi z^2/t^2}}
          {\sum_{z\in\mathbb Z}e^{-\pi z^2/t^2}}
                  \right|^{d}
    =\frac12\left|\mathbb E_{Z\leftarrow D_{\mathbb Z,t}}(-1)^Z\right|^d.
- \tag{G7}
+\end{aligned}
+\tag{G7}
 ```
 
 This follows by multiplying the $`d`$ independent parity characters.  In
@@ -229,20 +241,24 @@ Gaussian mass bounds are stated explicitly in
 Let $`q=2q_0`$ with $`q_0\ge2`$, let $`0<\epsilon<1/2`$, and suppose
 
 ```math
+\begin{aligned}
 \frac{s}{\sqrt2}\ge\eta_\epsilon(\mathbb Z^d),
  \qquad t=\sqrt8\,s.
- \tag{G8}
+\end{aligned}
+\tag{G8}
 ```
 
 For every distinguisher $`\mathcal D`$, there is a distinguisher $`\mathcal B`$
 for normal-form Module-LWE at $`(R,q_0,k,m,s)`$ such that
 
 ```math
-\operatorname{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
+\begin{aligned}
+\mathrm{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
  \le
- \operatorname{Adv}_{\mathsf{NFReal}_{q_0,s},\mathsf{NFRand}_{q_0}}
+ \mathrm{Adv}_{\mathsf{NFReal}_{q_0,s},\mathsf{NFRand}_{q_0}}
                  (\mathcal B)+2\epsilon+2\delta.
- \tag{G9}
+\end{aligned}
+\tag{G9}
 ```
 
 Here $`\delta`$ is the total variation error of the reduction's one product
@@ -262,7 +278,7 @@ $`V=(V_S,V_E)\leftarrow D_{\mathbb Z^d,2s}`$ independently, and output
 \begin{aligned}
  A&=A_0+q_0K\pmod q,\\
  b&=2b_0+AV_S+V_E\pmod q,\\
- c&=\mathbf1^T\operatorname{coef}(V)\pmod2.
+ c&=\mathbf1^T\mathrm{coef}(V)\pmod2.
  \end{aligned}
  \tag{G10}
 ```
@@ -302,10 +318,12 @@ Completing the square gives, for every $`x\in\mathbb Z^d`$,
 and therefore the exact mass formula
 
 ```math
+\begin{aligned}
 \Pr[X=x]
  =\frac{\rho_{\sqrt8s}(x)\,\Theta_{s/\sqrt2}(x/4)}
         {\rho_s(\mathbb Z^d)\rho_{2s}(\mathbb Z^d)}.
- \tag{G11}
+\end{aligned}
+\tag{G11}
 ```
 
 In particular, neither normalizer in the denominator is omitted.
@@ -314,8 +332,10 @@ Poisson summation and the smoothing definition imply, for every real $`v`$ and
 $`a\ge\eta_\epsilon(\mathbb Z^d)`$,
 
 ```math
+\begin{aligned}
 a^d(1-\epsilon)\le\Theta_a(v)\le a^d(1+\epsilon).
- \tag{G12}
+\end{aligned}
+\tag{G12}
 ```
 
 Indeed, after dividing by $`a^d`$, the zero dual-lattice term is one and the
@@ -333,8 +353,10 @@ $`\Delta(P,Q)\le(\Gamma-1)/(\Gamma+1)=\epsilon`$.
 Consequently
 
 ```math
+\begin{aligned}
 \Delta(\mathcal L(X),D_{\mathbb Z^d,t})\le\epsilon.
- \tag{G13}
+\end{aligned}
+\tag{G13}
 ```
 
 Applying the same deterministic map
@@ -355,8 +377,10 @@ Conditional on $`A,V`$, the value $`2b_0`$ is uniform on the even-coefficient
 subgroup of $`R_q^m`$.  Hence $`b`$ is uniform on the full coefficient-parity coset
 
 ```math
+\begin{aligned}
 \{y\in R_q^m:y\bmod2=M_A(V_S\bmod2)+(V_E\bmod2)\}.
- \tag{G14}
+\end{aligned}
+\tag{G14}
 ```
 
 This conditional distribution depends on $`V`$ only through its complete
@@ -364,9 +388,11 @@ coefficient parity vector $`r`$, not only through its augmentation.  For each
 $`r\in\{0,1\}^d`$,
 
 ```math
+\begin{aligned}
 \Pr[V\bmod2=r]=
        \frac{\Theta_s(r/2)}{\rho_{2s}(\mathbb Z^d)}.
- \tag{G15}
+\end{aligned}
+\tag{G15}
 ```
 
 The hypothesis implies $`s\ge\eta_\epsilon(\mathbb Z^d)`$.  Comparing these
@@ -405,8 +431,10 @@ Also $`t/2=\sqrt2s\ge\eta_\epsilon(\mathbb Z^d)`$, so the residue-mass
 argument applied to $`D_{\mathbb Z^d,t}`$ gives
 
 ```math
+\begin{aligned}
 \alpha_t\le\epsilon.
- \tag{G16}
+\end{aligned}
+\tag{G16}
 ```
 
 The exact expression (G7) may be much smaller.
@@ -433,11 +461,13 @@ ordinary uniform-secret Module-LWE distinguisher $`\mathcal B'`$ with $`k+m`$
 samples, at the same source modulus $`q_0`$ and width $`s`$, satisfying
 
 ```math
-\operatorname{Adv}_{\mathrm{MLWE}(q_0,s,k+m)}(\mathcal B')
- =p_k\operatorname{Adv}_{\mathrm{NFMLWE}(q_0,s,m)}(\mathcal B),
+\begin{aligned}
+\mathrm{Adv}_{\mathrm{MLWE}(q_0,s,k+m)}(\mathcal B')
+ =p_k\mathrm{Adv}_{\mathrm{NFMLWE}(q_0,s,m)}(\mathcal B),
  \qquad
  p_k=\prod_{i=1}^{k}(1-2^{-i})>\frac14.
- \tag{G17}
+\end{aligned}
+\tag{G17}
 ```
 
 *Proof.*
@@ -470,8 +500,10 @@ Split the challenge rows into $`(B,v_B)`$ with $`k`$ rows and $`(C_1,v_1)`$ with
 $`m`$ rows.  If $`B`$ is not invertible, output a fixed bit.  Otherwise form
 
 ```math
+\begin{aligned}
 A_0=C_1B^{-1},\qquad b_0=v_1-A_0v_B.
- \tag{G18}
+\end{aligned}
+\tag{G18}
 ```
 
 In the real branch, writing the two error blocks as $`e_B,e_1`$ gives
@@ -497,24 +529,26 @@ $`q=2^a`$ with $`a\ge2`$.  For every $`\mathcal D`$ there is an ordinary
 uniform-secret Module-LWE distinguisher $`\mathcal B'`$ such that
 
 ```math
-\operatorname{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
+\begin{aligned}
+\mathrm{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
  \le
- \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
+ \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
        +2\epsilon+2\delta.
- \tag{G19}
+\end{aligned}
+\tag{G19}
 ```
 
 Consequently,
 
 ```math
 \begin{aligned}
- \operatorname{Adv}_{\mathsf T_{q,t},\mathsf J_{\mathrm{fair}}}(\mathcal D)
+ \mathrm{Adv}_{\mathsf T_{q,t},\mathsf J_{\mathrm{fair}}}(\mathcal D)
  &\le 2^{-(k+1)}+
-       \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
+       \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
        +2\epsilon+2\delta,\\
- \operatorname{Adv}_{\mathsf T_{q,t},\mathsf J_t}(\mathcal D)
+ \mathrm{Adv}_{\mathsf T_{q,t},\mathsf J_t}(\mathcal D)
  &\le 2^{-(k+1)}+(1-2^{-k})\alpha_t+
-       \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
+       \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B')}{p_k}
        +2\epsilon+2\delta.
  \end{aligned}
  \tag{G20}

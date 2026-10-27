@@ -15,12 +15,23 @@ This repository studies exact linear leakage in negacyclic Module-LWE, the publi
 - references/wll_source_audit.md: exact source identity and limits of the conference-version comparison.
 - references/references.bib: machine-readable citations.
 - verification/README.md: deterministic reproduction instructions and coverage.
+- learning/README.md: educational entry point and choice of reading route.
+- learning/PEIKERT_BRIDGE.md: the single anchor, Peikert's A Decade of Lattice Cryptography (2016), with section mapping, notation translation, and the steps from the survey to this project.
+- learning/MILESTONES.md: exactly 30 shared understanding targets, with dependencies and source pointers, in background/preliminaries and narrative/innovation phases.
+
+## Routes by reader intention
+
+For the scientific story, read README.md, science/model.md, science/linear_leakage.md, science/norm_parity.md, science/gaussian_characterization.md, and science/interpretation.md. The source-specific finite-batch contradiction has its own complete route in science/published_reduction.md and references/wll_source_audit.md.
+
+For study, start at learning/README.md and learning/PEIKERT_BRIDGE.md, then follow learning/MILESTONES.md and its canonical source links. The map's targets and dependencies are shared; the exact scientific statements remain authoritative in science/.
+
+For theorem verification, use the model first, then Theorems A1–A2 in science/linear_leakage.md, Theorem N1 in science/norm_parity.md, or Theorem G2 and Corollary G4 in science/gaussian_characterization.md. For reproduction, use verification/README.md and the committed expected JSON reports.
 
 ## Conventions that control the claims
 
 N is ring degree, k is module rank, and m is sample count. Advantages are differences of acceptance probabilities; WLL's guessing advantage is half this gap. The independent-response benchmark preserves the genuine hint marginal. Exact TV claims for arbitrary linear hints require uniform hidden variables; the public test's stated gap does not. Field ranks must be replaced by additive image cardinalities at composite coefficient modulus.
 
-The positive Gaussian theorem concerns only the norm-parity bit. Its ordinary-MLWE source has modulus q/2, width t/sqrt(8), and k+m ring samples. The constant-loss normal-form conversion is proved for power-of-two ring degree and modulus. Classical reductions also work with QPT distinguishers on classical inputs under the corresponding source assumption.
+The positive Gaussian theorem concerns only the norm-parity bit. Its ordinary-MLWE source has modulus q/2, width t/sqrt(8), and k+m ring samples. The constant-loss normal-form conversion is proved for power-of-two ring degree N>=2 and modulus q>=4. Classical reductions also work with QPT distinguishers on classical inputs under the corresponding source assumption.
 
 The theorem counterexample does not establish an attack on the cited zero-knowledge protocol. Revealing a norm or covariance transfers the negative parity test, but the positive bit theorem does not establish hardness for the full descriptor. The public repository makes no claim to prove ordinary Module-LWE hardness.
 

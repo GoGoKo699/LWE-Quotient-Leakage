@@ -36,7 +36,9 @@ Define the augmentation homomorphism
 Both the coefficient modulus and the relation $`X^N+1`$ vanish under this map. Since $`z^2=z`$ in $`\mathbb F_2`$,
 
 ```math
+\begin{aligned}
 c=\sum_j\phi(S_j)+\sum_i\phi(E_i).
+\end{aligned}
 \tag{N1}
 ```
 
@@ -47,8 +49,10 @@ c=\sum_j\phi(S_j)+\sum_i\phi(E_i).
 Define the public event
 
 ```math
+\begin{aligned}
 G(A):\qquad \sum_{i=1}^m\phi(A_{ij})=1
 \quad\text{for every }j\in[k].
+\end{aligned}
 \tag{N2}
 ```
 
@@ -64,9 +68,11 @@ has real acceptance probability $`2^{-k}`$ and independent-experiment acceptance
 *Proof.* Apply $`\phi`$ to every entry of the equation $`B=AS+E`$ and sum its rows. Combining the result with (N1) gives
 
 ```math
+\begin{aligned}
 c+\sum_i\phi(B_i)
 =\sum_{j=1}^{k}
  \left(1+\sum_{i=1}^{m}\phi(A_{ij})\right)\phi(S_j).
+\end{aligned}
 \tag{N3}
 ```
 
@@ -85,19 +91,21 @@ The test is also a special case of the [scalar ideal-dimension law](linear_leaka
 Let the disclosed ring element be
 
 ```math
+\begin{aligned}
 K=\sum_{j=1}^{k}S_j\overline{S_j}
    +\sum_{i=1}^{m}E_i\overline{E_i}\in R,
 \qquad \bar f=f(X^{-1}).
+\end{aligned}
 \tag{N4}
 ```
 
 For a polynomial $`f=\sum_{a=0}^{N-1}f_aX^a`$, expansion of $`f\bar f`$ shows
 
 ```math
-\operatorname{ct}(f\bar f)=\sum_{a=0}^{N-1}f_a^2.
+\mathrm{ct}(f\bar f)=\sum_{a=0}^{N-1}f_a^2.
 ```
 
-Only equal exponents contribute to the constant coefficient, since their differences lie strictly between $`-N`$ and $`N`$. Hence $`\operatorname{ct}(K)=C`$, and the test needs only the low bit of that coefficient. The same conclusion holds if the descriptor reveals $`K\bmod q`$, because $`q`$ is even.
+Only equal exponents contribute to the constant coefficient, since their differences lie strictly between $`-N`$ and $`N`$. Hence $`\mathrm{ct}(K)=C`$, and the test needs only the low bit of that coefficient. The same conclusion holds if the descriptor reveals $`K\bmod q`$, because $`q`$ is even.
 
 At $`k=1`$, (N4) is the covariance descriptor in Micciancio–Suhl's Known-Covariance RLWE definition. Thus Theorem N1 gives advantage $`1/4`$ against its independent-sample benchmark throughout the even-modulus regime. For $`k>1`$, the theorem applies to the explicitly specified module analogue whenever its hint reveals the parity of the constant coefficient of (N4). [MS2025, Definition 12, p. 16](https://cic.iacr.org/p/1/4/2/pdf).
 
@@ -179,8 +187,8 @@ The simple gate test still has advantage **exactly** $`2^{-(k+1)}`$ between the 
 The [matching Gaussian theorem](gaussian_characterization.md) proves that, at a pure power-of-two modulus $`q\ge4`$, Gaussian norm parity is computationally indistinguishable from $`\mathsf I_q`$ under ordinary uniform-secret Module-LWE at modulus $`q/2`$ and width $`s=t/\sqrt8`$, with $`k`$ extra samples. Its explicit reduction bound is
 
 ```math
-\operatorname{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
-\le \frac{\operatorname{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B)}{p_k}
+\mathrm{Adv}_{\mathsf T_{q,t},\mathsf I_q}(\mathcal D)
+\le \frac{\mathrm{Adv}_{\mathrm{MLWE}(q/2,s,k+m)}(\mathcal B)}{p_k}
      +2\epsilon+2\delta,
 \qquad p_k=\prod_{i=1}^{k}(1-2^{-i})>\frac14,
 ```
